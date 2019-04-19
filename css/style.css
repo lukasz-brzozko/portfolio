@@ -1,5 +1,15 @@
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {

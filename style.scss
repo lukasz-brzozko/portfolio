@@ -1,22 +1,27 @@
+::selection {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    color: #000;
+  display: block;
+  text-decoration: none;
+  color: #000;
 }
 
 .spacing {
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import './sass_components/header';
-@import './sass_components/about';
+@import "./sass_components/header";
+@import "./sass_components/about";
