@@ -1,0 +1,25 @@
+#about {
+    position: relative;
+    background-color: #eee;
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        right: 20%;
+        transform: translateY(-50%);
+    }
+
+    .about-subtitle {
+        font-size: 10vh;
+        margin-bottom: 8vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .about-me {
+        font-size: 3vh;
+        text-align: justify;
+        line-height: 1.5;
+    }
+}

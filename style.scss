@@ -1,11 +1,15 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
     display: block;
     text-decoration: none;
     color: #000;
+}
+
+.spacing {
+    letter-spacing: 2px;
 }
 
 * {
@@ -15,3 +19,4 @@ a {
 }
 
 @import './sass_components/header';
+@import './sass_components/about';
