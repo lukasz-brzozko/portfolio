@@ -3,6 +3,12 @@
   color: #fff;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -17,11 +23,7 @@ a {
   letter-spacing: 2px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-@import "./sass_components/header";
-@import "./sass_components/about";
+
+@import "header";
+@import "about";
