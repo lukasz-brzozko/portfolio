@@ -22,7 +22,13 @@ body {
 a {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 8vh;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .spacing {
@@ -67,6 +73,8 @@ a {
   width: 100%;
   height: 5vh;
   background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   z-index: 1;
 }
@@ -110,6 +118,7 @@ a {
 
 .top-bar .bar-container .menu .menu-container .menu-item > a {
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 #about {
@@ -127,15 +136,99 @@ a {
 }
 
 #about .about-subtitle {
-  font-size: 10vh;
   margin-bottom: 8vh;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 #about .about-me {
   font-size: 3vh;
   text-align: justify;
   line-height: 1.5;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 200vh;
+  background-color: #333;
+}
+
+#projects .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90%;
+  width: 90%;
+}
+
+#projects .container .project-subtitle {
+  color: #fff;
+}
+
+#projects .container .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+}
+
+#projects .container .project > .half {
+  width: 50%;
+}
+
+#projects .container .project .description-container {
+  background-color: #29A6DC;
+  border-radius: 10px;
+}
+
+#projects .container .project .description-container .project-description {
+  width: 100%;
+  color: #fff;
+  padding: 2vh 3vw;
+}
+
+#projects .container .project .description-container .project-description.project-name {
+  height: 25%;
+  font-size: 3vh;
+  text-align: center;
+}
+
+#projects .container .project .description-container .project-description.description {
+  height: 75%;
+  line-height: 1.5;
+  font-size: 2vh;
+  text-align: justify;
+}
+
+#projects .container .project .img-container > img {
+  width: 100%;
+}
+
+#projects .container .project:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#projects .container .project:nth-of-type(even) > .description-container {
+  background-color: #eee;
+}
+
+#projects .container .project:nth-of-type(even) > .description-container .project-description {
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */

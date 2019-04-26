@@ -16,7 +16,13 @@ body {
 a {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 8vh;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .spacing {
@@ -27,3 +33,4 @@ a {
 
 @import "header";
 @import "about";
+@import "projects";
