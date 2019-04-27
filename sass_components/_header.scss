@@ -25,12 +25,12 @@
 
         .name {
             font-size: 10vh;
-            margin-bottom: 2vh;
         }
 
-        .subtitle {
-            font-size: 3vh;
+        .profession {
+            font-size: 4vh;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
     }
 }
@@ -53,8 +53,8 @@
         height: 100%;
         margin: 0 auto;
 
-        h2 {
-            letter-spacing: 2px;
+        .author>a {
+            font-size: 2.5vh;
         }
 
         .menu {
@@ -68,8 +68,8 @@
                 list-style: none;
 
                 .menu-item>a {
-                    letter-spacing: 2px;
                     font-weight: bold;
+                    font-size: 2.5vh;
                 }
             }
         }
