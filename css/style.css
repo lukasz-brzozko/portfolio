@@ -17,12 +17,19 @@
 
 body {
   font-family: "Saira Condensed", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 a {
   display: block;
   text-decoration: none;
-  color: #333;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style: none;
 }
 
 .subtitle {
@@ -93,8 +100,14 @@ a {
   margin: 0 auto;
 }
 
-.top-bar .bar-container .author > a {
+.top-bar .bar-container .scroll {
+  font-weight: bold;
   font-size: 2.5vh;
+  color: #333;
+}
+
+.top-bar .bar-container .scroll:hover {
+  color: #1592c8;
 }
 
 .top-bar .bar-container .menu {
@@ -114,11 +127,6 @@ a {
           justify-content: space-between;
   height: 100%;
   list-style: none;
-}
-
-.top-bar .bar-container .menu .menu-container .menu-item > a {
-  font-weight: bold;
-  font-size: 2.5vh;
 }
 
 #about {
@@ -231,5 +239,68 @@ a {
 
 #projects .container .project:nth-of-type(even) > .description-container .project-description {
   color: #000;
+}
+
+#contact {
+  position: relative;
+  height: 95vh;
+  background-color: #eee;
+}
+
+#contact .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#contact .container .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 30vh;
+  margin-top: 3vh;
+  text-align: center;
+}
+
+#contact .container .media .media-item {
+  font-size: 3vh;
+}
+
+#contact .container .media .media-item a {
+  color: #000;
+}
+
+#contact .container .media .media-item a:hover {
+  color: #1592c8;
+}
+
+#contact .container .media .media-item .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer {
+  height: 5vh;
+  background-color: #29a6dc;
+}
+
+footer p {
+  font-size: 2vh;
+  line-height: 5vh;
+  text-align: center;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

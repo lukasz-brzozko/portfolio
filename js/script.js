@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const anchors = document.querySelectorAll("a");
+  const anchors = document.querySelectorAll(".scroll");
 
   const setSmoothScroll = function(e) {
     e.preventDefault();

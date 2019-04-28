@@ -11,12 +11,18 @@
 
 body {
   font-family: "Saira Condensed", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 a {
   display: block;
   text-decoration: none;
-  color: #333;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style: none;
 }
 
 .subtitle {
@@ -30,7 +36,9 @@ a {
 }
 
 
-
+@import "variables";
 @import "header";
 @import "about";
 @import "projects";
+@import "contact";
+@import "footer";

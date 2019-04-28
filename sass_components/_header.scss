@@ -1,10 +1,5 @@
 // ##### HEADER SECTION #####
 
-@mixin flex-row-center {
-    display: flex;
-    align-items: center;
-}
-
 #title,
 .section {
     height: 100vh;
@@ -53,8 +48,14 @@
         height: 100%;
         margin: 0 auto;
 
-        .author>a {
+        .scroll {
+            font-weight: bold;
             font-size: 2.5vh;
+            color: #333;
+        }
+
+        .scroll:hover {
+            color: $blue-font
         }
 
         .menu {
@@ -67,10 +68,6 @@
                 height: 100%;
                 list-style: none;
 
-                .menu-item>a {
-                    font-weight: bold;
-                    font-size: 2.5vh;
-                }
             }
         }
     }

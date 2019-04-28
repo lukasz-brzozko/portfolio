@@ -1,0 +1,39 @@
+#contact {
+    position: relative;
+    height: 95vh;
+    background-color: #eee;
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40%;
+        transform: translate(-50%, -50%);
+
+        .media {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 30vh;
+            margin-top: 3vh;
+            text-align: center;
+
+            .media-item {
+                font-size: 3vh;
+
+                a {
+                    color: #000;
+                }
+
+                a:hover {
+                    color: $blue-font;
+                }
+
+                .social-media {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
