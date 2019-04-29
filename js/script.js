@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const anchors = document.querySelectorAll(".scroll");
+  const btn = document.querySelector(".btn-menu");
 
   const setSmoothScroll = function(e) {
     e.preventDefault();
@@ -13,5 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   anchors.forEach(anchor => {
     anchor.addEventListener("click", setSmoothScroll);
+  });
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+    document.querySelector(".top-bar").classList.toggle("expand");
   });
 });

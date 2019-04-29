@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Saira Condensed", sans-serif;
   max-width: 1920px;
@@ -35,8 +39,8 @@ ul {
   letter-spacing: 2px;
 }
 
-
 @import "variables";
+@import "mixins";
 @import "header";
 @import "about";
 @import "projects";

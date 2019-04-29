@@ -3,6 +3,7 @@
 #title,
 .section {
     height: 100vh;
+    overflow: hidden;
 }
 
 #title {
@@ -35,23 +36,36 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5vh;
+    // height: 5vh;
+    height: 70px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     text-transform: uppercase;
+    overflow: hidden;
     z-index: 1;
 
+
     .bar-container {
-        @include flex-row-center;
-        justify-content: space-around;
-        width: 90%;
+        position: relative;
+        width: 100%;
         height: 100%;
         margin: 0 auto;
 
+        .author {
+            position: absolute;
+            left: 15%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include media(900px) {
+                top: 35px;
+            }
+        }
+
         .scroll {
             font-weight: bold;
-            font-size: 2.5vh;
-            color: #333;
+            font-size: 2.4rem;
+            color: $dark-gray;
         }
 
         .scroll:hover {
@@ -59,16 +73,92 @@
         }
 
         .menu {
+            position: absolute;
+            left: 60%;
+            top: 50%;
+            transform: translateY(-50%);
             height: 100%;
             width: 25%;
+
+            @include media(1440px) {
+                width: 33%;
+            }
+
+            @include media(1100px) {
+                left: auto;
+                right: 5%;
+                width: 40%;
+            }
+
+            @include media(900px) {
+                display: none;
+            }
 
             .menu-container {
                 @include flex-row-center;
                 justify-content: space-between;
                 height: 100%;
                 list-style: none;
+            }
+        }
+
+        .btn-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            right: 5%;
+            top: 35px;
+            transform: translateY(-50%);
+            height: 20px;
+            box-sizing: content-box;
+            padding: 20px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+
+            @include media(900px) {
+                display: flex;
+            }
+
+            .menu-bar {
+                width: 30px;
+                height: 4px;
+                border-radius: 5px;
+                background-color: $dark-gray;
 
             }
         }
     }
+
+    &.expand {
+        height: 40vh;
+
+        .bar-container {
+
+            .btn-menu {
+                justify-content: center;
+
+                .menu-bar.top {
+                    transform: translateY(100%) rotate(45deg)
+                }
+
+                .menu-bar.middle {
+                    opacity: 0;
+                }
+
+                .menu-bar.bottom {
+                    transform: translateY(-100%) rotate(-45deg)
+                }
+            }
+        }
+    }
+}
+
+.top-bar,
+.author,
+.btn-menu,
+.menu-bar {
+    transition: all 0.3s;
 }
