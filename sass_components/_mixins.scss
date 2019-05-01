@@ -8,3 +8,9 @@
         @content
     }
 }
+
+@mixin media-hor($width) {
+    @media only screen and (orientation: landscape) and (max-width: $width) {
+        @content
+    }
+}

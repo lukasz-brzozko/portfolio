@@ -13,148 +13,76 @@
     .text-container {
         position: absolute;
         left: 15%;
-        top: 45%;
-        width: 70%;
+        right: 15%;
+        top: 50%;
         transform: translateY(-50%);
         text-transform: uppercase;
         color: #fff;
 
         .name {
-            font-size: 10vh;
+            font-size: 10rem;
+            margin-bottom: 1vh;
+
+            @include media(960px) {
+                font-size: 8rem;
+                margin-bottom: 2vh;
+            }
+
+            @include media(531px) {
+                font-size: 6rem;
+            }
+
+            @include media(350px) {
+                font-size: 5rem;
+            }
+
+            @include media-hor(758px) {
+                font-size: 6.6rem;
+            }
+
+            @include media-hor(633px) {
+                font-size: 6.2rem;
+            }
+
+            @include media-hor(597px) {
+                font-size: 5.4rem;
+            }
         }
 
         .profession {
-            font-size: 4vh;
+            font-size: 3rem;
             letter-spacing: 1px;
             text-transform: uppercase;
+
+            @include media(531px) {
+                font-size: 2.5rem;
+            }
+
+            @include media(450px) {
+                font-size: 2rem;
+            }
+
+            @include media-hor(758px) {
+                font-size: 2.7rem;
+            }
+
+            @include media-hor(758px) {
+                font-size: 2.4rem;
+            }
+
+            @include media-hor(597px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .name,
+        .profession {
+            line-height: 1.1;
         }
     }
 }
 
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    // height: 5vh;
-    height: 70px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    text-transform: uppercase;
-    overflow: hidden;
-    z-index: 1;
-
-
-    .bar-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-
-        .author {
-            position: absolute;
-            left: 15%;
-            top: 50%;
-            transform: translateY(-50%);
-
-            @include media(900px) {
-                top: 35px;
-            }
-        }
-
-        .scroll {
-            font-weight: bold;
-            font-size: 2.4rem;
-            color: $dark-gray;
-        }
-
-        .scroll:hover {
-            color: $blue-font
-        }
-
-        .menu {
-            position: absolute;
-            left: 60%;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 100%;
-            width: 25%;
-
-            @include media(1440px) {
-                width: 33%;
-            }
-
-            @include media(1100px) {
-                left: auto;
-                right: 5%;
-                width: 40%;
-            }
-
-            @include media(900px) {
-                display: none;
-            }
-
-            .menu-container {
-                @include flex-row-center;
-                justify-content: space-between;
-                height: 100%;
-                list-style: none;
-            }
-        }
-
-        .btn-menu {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            position: absolute;
-            right: 5%;
-            top: 35px;
-            transform: translateY(-50%);
-            height: 20px;
-            box-sizing: content-box;
-            padding: 20px;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            outline: none;
-
-            @include media(900px) {
-                display: flex;
-            }
-
-            .menu-bar {
-                width: 30px;
-                height: 4px;
-                border-radius: 5px;
-                background-color: $dark-gray;
-
-            }
-        }
-    }
-
-    &.expand {
-        height: 40vh;
-
-        .bar-container {
-
-            .btn-menu {
-                justify-content: center;
-
-                .menu-bar.top {
-                    transform: translateY(100%) rotate(45deg)
-                }
-
-                .menu-bar.middle {
-                    opacity: 0;
-                }
-
-                .menu-bar.bottom {
-                    transform: translateY(-100%) rotate(-45deg)
-                }
-            }
-        }
-    }
-}
+@import 'header_topbar';
 
 .top-bar,
 .author,

@@ -60,8 +60,8 @@ ul {
 #title .text-container {
   position: absolute;
   left: 15%;
-  top: 45%;
-  width: 70%;
+  right: 15%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   text-transform: uppercase;
@@ -69,13 +69,86 @@ ul {
 }
 
 #title .text-container .name {
-  font-size: 10vh;
+  font-size: 10rem;
+  margin-bottom: 1vh;
+}
+
+@media only screen and (max-width: 960px) {
+  #title .text-container .name {
+    font-size: 8rem;
+    margin-bottom: 2vh;
+  }
+}
+
+@media only screen and (max-width: 531px) {
+  #title .text-container .name {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #title .text-container .name {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 758px) {
+  #title .text-container .name {
+    font-size: 6.6rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 633px) {
+  #title .text-container .name {
+    font-size: 6.2rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 597px) {
+  #title .text-container .name {
+    font-size: 5.4rem;
+  }
 }
 
 #title .text-container .profession {
-  font-size: 4vh;
+  font-size: 3rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 531px) {
+  #title .text-container .profession {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #title .text-container .profession {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 758px) {
+  #title .text-container .profession {
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 758px) {
+  #title .text-container .profession {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 597px) {
+  #title .text-container .profession {
+    font-size: 1.8rem;
+  }
+}
+
+#title .text-container .name,
+#title .text-container .profession {
+  line-height: 1.1;
 }
 
 .top-bar {
@@ -117,6 +190,18 @@ ul {
   font-weight: bold;
   font-size: 2.4rem;
   color: #333;
+}
+
+@media only screen and (max-width: 530px) {
+  .top-bar .bar-container .scroll {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .top-bar .bar-container .scroll {
+    font-size: 2.1rem;
+  }
 }
 
 .top-bar .bar-container .scroll:hover {
@@ -208,6 +293,12 @@ ul {
 
 .top-bar.expand {
   height: 40vh;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 900px) {
+  .top-bar.expand {
+    height: 60vh;
+  }
 }
 
 .top-bar.expand .bar-container .btn-menu {
