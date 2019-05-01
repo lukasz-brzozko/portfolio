@@ -1,3 +1,11 @@
+@import "variables";
+@import "mixins";
+@import "header";
+@import "about";
+@import "projects";
+@import "contact";
+@import "footer";
+
 ::selection {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -30,19 +38,35 @@ ul {
 }
 
 .subtitle {
-  font-size: 8vh;
+  font-size: 8rem;
   text-align: center;
   text-transform: uppercase;
+
+  @include media(1440px) {
+    font-size: 7rem;
+  }
+
+  @include media(1024px) {
+    font-size: 6rem;
+  }
+
+  @include media(650px) {
+    font-size: 5rem;
+  }
+
+  @include media(330px) {
+    font-size: 4rem;
+  }
+
+  @include media-hor(1023px) {
+    font-size: 5rem;
+  }
+
+  @include media-hor(700px) {
+    font-size: 4rem;
+  }
 }
 
 .spacing {
   letter-spacing: 2px;
 }
-
-@import "variables";
-@import "mixins";
-@import "header";
-@import "about";
-@import "projects";
-@import "contact";
-@import "footer";

@@ -19,6 +19,14 @@
         text-transform: uppercase;
         color: #fff;
 
+        @media (orientation: portrait) {
+            top: 48%;
+        }
+
+        @include media-hor(1000px) {
+            top: 53%;
+        }
+
         .name {
             font-size: 10rem;
             margin-bottom: 1vh;

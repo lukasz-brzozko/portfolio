@@ -7,18 +7,75 @@
     .container {
         position: absolute;
         top: 50%;
-        left: 20%;
-        right: 20%;
+        left: 15%;
+        right: 15%;
         transform: translateY(-50%);
+
+        @include media(1500px) {
+            left: 10%;
+            right: 10%;
+        }
+
+        @include media(1024px) {
+            left: 5%;
+            right: 5%;
+        }
     }
 
     .about-subtitle {
-        margin-bottom: 8vh;
+        margin-bottom: 70px;
+
+        @include media(1000px) {
+            margin-bottom: 50px;
+        }
+
+        @include media(640px) {
+            margin-bottom: 40px;
+        }
+
+        @include media-hor(1023px) {
+            margin-bottom: 30px;
+        }
+
+        @include media-hor(700px) {
+            margin-bottom: 20px;
+        }
+
+        @include media-hor(650px) {
+            margin-bottom: 10px;
+        }
     }
 
     .about-me {
-        font-size: 3.5vh;
+        font-family: 'Saira', sans-serif;
+        font-size: 3rem;
         text-align: justify;
-        line-height: 1.5;
+        line-height: 1.8;
+
+        @include media(1600px) {
+            font-size: 2.5rem;
+        }
+
+        @include media(1024px) {
+            font-size: 2rem;
+        }
+
+        @include media(650px) {
+            font-size: 1.6rem;
+            line-height: 2;
+        }
+
+        @include media(330px) {
+            font-size: 1.4rem;
+            line-height: 2;
+        }
+
+        @include media-hor(1023px) {
+            font-size: 1.6rem;
+        }
+
+        @include media-hor(650px) {
+            font-size: 1.4rem;
+        }
     }
 }
