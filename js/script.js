@@ -14,8 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  //Shrinks the top bar
+  const removeExpandClass = () => {
+    topBar.classList.remove("expand");
+  };
+
   anchors.forEach(anchor => {
     anchor.addEventListener("click", setSmoothScroll);
+    if (anchor.classList.contains("mobile")) {
+      anchor.addEventListener("click", removeExpandClass);
+    }
   });
 
   // Menu hamburger's click handler
@@ -25,6 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Shrink the top bar when the window is resized manually
   window.addEventListener("resize", () => {
-    if (innerWidth > 900) topBar.classList.remove("expand");
+    if (innerWidth > 900) removeExpandClass();
   });
 });
