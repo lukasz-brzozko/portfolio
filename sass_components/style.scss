@@ -14,7 +14,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -25,6 +24,14 @@ body {
   font-family: "Saira Condensed", sans-serif;
   max-width: 1920px;
   margin: 0 auto;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a {
