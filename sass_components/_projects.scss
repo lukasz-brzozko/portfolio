@@ -1,73 +1,76 @@
 // ##### PROJECTS SECTION #####
 
-#projects {
+.projects-section {
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 200vh;
+  height: auto;
+  min-height: 100vh;
   background-color: $dark-gray;
 
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90%;
+    min-height: 100%;
     width: 90%;
-    // border: 2px solid #fff;
 
     .project-subtitle {
       color: #fff;
+      margin: 100px 0 50px;
     }
 
     .project {
       display: flex;
-      // border: 2px dashed white;
-      height: 50vh;
+      justify-content: center;
+      align-items: center;
+      // height: $project-height;
+      margin-bottom: 70px;
 
-      &>.piece {
-        width: 50%;
+      .img-container {
+        border: 2px solid white;
+        border-radius: $border-radius;
+        width: $project-height;
+        height: $project-height;
+        margin-right: 100px;
       }
 
       .description-container {
         background-color: #29a6dc;
-        border-radius: 10px;
+        border-radius: $border-radius;
+        width: 50%;
+        height: $project-height;
 
         .project-description {
-          width: 100%;
+          box-sizing: border-box;
+          padding: 20px 40px;
           color: #fff;
-          padding: 3vh 3vw;
+          overflow: hidden;
 
           &.project-name {
             height: 25%;
-            // padding-top: 1vh;
-            font-size: 4vh;
+            font-size: 3.5rem;
+            font-weight: bold;
             text-align: center;
             text-transform: uppercase;
+            letter-spacing: 2px;
           }
 
           &.description {
-            height: 75%;
+            max-height: 50%;
             line-height: 1.5;
-            font-size: 3vh;
+            font-size: 2.5rem;
             text-align: justify;
           }
         }
       }
-
-      .img-container>img {
-        width: 100%;
-      }
     }
 
-    .project:nth-of-type(even) {
-      flex-direction: row-reverse;
 
-      &>.description-container {
-        background-color: $light-gray;
+    .project:nth-of-type(even)>.description-container {
+      background-color: $light-gray;
 
-        .project-description {
-          color: #000;
-        }
+      .project-description {
+        color: #000;
       }
     }
   }

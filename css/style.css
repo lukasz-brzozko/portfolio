@@ -1,15 +1,15 @@
-#title,
+.header-title,
 .section {
   height: 100vh;
   overflow: hidden;
 }
 
-#title {
+.header-title {
   position: relative;
   background-color: #29a6dc;
 }
 
-#title .text-container {
+.header-title .text-container {
   position: absolute;
   left: 15%;
   right: 15%;
@@ -21,97 +21,97 @@
 }
 
 @media (orientation: portrait) {
-  #title .text-container {
+  .header-title .text-container {
     top: 48%;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1000px) {
-  #title .text-container {
+  .header-title .text-container {
     top: 53%;
   }
 }
 
-#title .text-container .name {
+.header-title .text-container .name {
   font-size: 10rem;
   margin-bottom: 1vh;
 }
 
 @media only screen and (max-width: 960px) {
-  #title .text-container .name {
+  .header-title .text-container .name {
     font-size: 8rem;
     margin-bottom: 2vh;
   }
 }
 
 @media only screen and (max-width: 531px) {
-  #title .text-container .name {
+  .header-title .text-container .name {
     font-size: 6rem;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  #title .text-container .name {
+  .header-title .text-container .name {
     font-size: 5rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 758px) {
-  #title .text-container .name {
+  .header-title .text-container .name {
     font-size: 6.6rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 633px) {
-  #title .text-container .name {
+  .header-title .text-container .name {
     font-size: 6.2rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 597px) {
-  #title .text-container .name {
+  .header-title .text-container .name {
     font-size: 5.4rem;
   }
 }
 
-#title .text-container .profession {
+.header-title .text-container .profession {
   font-size: 3rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 @media only screen and (max-width: 531px) {
-  #title .text-container .profession {
+  .header-title .text-container .profession {
     font-size: 2.5rem;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  #title .text-container .profession {
+  .header-title .text-container .profession {
     font-size: 2rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 758px) {
-  #title .text-container .profession {
+  .header-title .text-container .profession {
     font-size: 2.7rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 758px) {
-  #title .text-container .profession {
+  .header-title .text-container .profession {
     font-size: 2.4rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 597px) {
-  #title .text-container .profession {
+  .header-title .text-container .profession {
     font-size: 1.8rem;
   }
 }
 
-#title .text-container .name,
-#title .text-container .profession {
+.header-title .text-container .name,
+.header-title .text-container .profession {
   line-height: 1.1;
 }
 
@@ -417,12 +417,12 @@
   transition: all 0.3s;
 }
 
-#about {
+.about-section {
   position: relative;
   background-color: #eee;
 }
 
-#about .container {
+.about-section .container {
   position: absolute;
   top: 50%;
   left: 15%;
@@ -432,54 +432,54 @@
 }
 
 @media only screen and (max-width: 1500px) {
-  #about .container {
+  .about-section .container {
     left: 10%;
     right: 10%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  #about .container {
+  .about-section .container {
     left: 5%;
     right: 5%;
   }
 }
 
-#about .about-subtitle {
+.about-section .about-subtitle {
   margin-bottom: 70px;
 }
 
 @media only screen and (max-width: 1000px) {
-  #about .about-subtitle {
+  .about-section .about-subtitle {
     margin-bottom: 50px;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  #about .about-subtitle {
+  .about-section .about-subtitle {
     margin-bottom: 40px;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1023px) {
-  #about .about-subtitle {
+  .about-section .about-subtitle {
     margin-bottom: 30px;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 700px) {
-  #about .about-subtitle {
+  .about-section .about-subtitle {
     margin-bottom: 20px;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 650px) {
-  #about .about-subtitle {
+  .about-section .about-subtitle {
     margin-bottom: 10px;
   }
 }
 
-#about .about-me {
+.about-section .about-me {
   font-family: 'Saira', sans-serif;
   font-size: 3rem;
   text-align: justify;
@@ -487,44 +487,73 @@
 }
 
 @media only screen and (max-width: 1600px) {
-  #about .about-me {
+  .about-section .about-me {
     font-size: 2.5rem;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  #about .about-me {
+  .about-section .about-me {
     font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  #about .about-me {
+  .about-section .about-me {
     font-size: 1.6rem;
     line-height: 2;
   }
 }
 
 @media only screen and (max-width: 330px) {
-  #about .about-me {
+  .about-section .about-me {
     font-size: 1.4rem;
     line-height: 2;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1023px) {
-  #about .about-me {
+  .about-section .about-me {
     font-size: 1.6rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 650px) {
-  #about .about-me {
+  .about-section .about-me {
     font-size: 1.4rem;
   }
 }
 
-#projects {
+.projects-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  min-height: 100vh;
+  background-color: #333;
+}
+
+.projects-section .container {
+  min-height: 100%;
+  width: 90%;
+}
+
+.projects-section .container .project-subtitle {
+  color: #fff;
+  margin: 100px 0 50px;
+}
+
+.projects-section .container .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,91 +563,63 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 200vh;
-  background-color: #333;
+  margin-bottom: 70px;
 }
 
-#projects .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 90%;
-  width: 90%;
+.projects-section .container .project .img-container {
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 370px;
+  height: 370px;
+  margin-right: 100px;
 }
 
-#projects .container .project-subtitle {
-  color: #fff;
-}
-
-#projects .container .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 50vh;
-}
-
-#projects .container .project > .piece {
-  width: 50%;
-}
-
-#projects .container .project .description-container {
+.projects-section .container .project .description-container {
   background-color: #29a6dc;
   border-radius: 10px;
+  width: 50%;
+  height: 370px;
 }
 
-#projects .container .project .description-container .project-description {
-  width: 100%;
+.projects-section .container .project .description-container .project-description {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 40px;
   color: #fff;
-  padding: 3vh 3vw;
+  overflow: hidden;
 }
 
-#projects .container .project .description-container .project-description.project-name {
+.projects-section .container .project .description-container .project-description.project-name {
   height: 25%;
-  font-size: 4vh;
+  font-size: 3.5rem;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-#projects .container .project .description-container .project-description.description {
-  height: 75%;
+.projects-section .container .project .description-container .project-description.description {
+  max-height: 50%;
   line-height: 1.5;
-  font-size: 3vh;
+  font-size: 2.5rem;
   text-align: justify;
 }
 
-#projects .container .project .img-container > img {
-  width: 100%;
-}
-
-#projects .container .project:nth-of-type(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-#projects .container .project:nth-of-type(even) > .description-container {
+.projects-section .container .project:nth-of-type(even) > .description-container {
   background-color: #eee;
 }
 
-#projects .container .project:nth-of-type(even) > .description-container .project-description {
+.projects-section .container .project:nth-of-type(even) > .description-container .project-description {
   color: #000;
 }
 
-#contact {
+.contact-section {
   position: relative;
   height: 95vh;
   background-color: #eee;
 }
 
-#contact .container {
+.contact-section .container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -627,7 +628,7 @@
           transform: translate(-50%, -50%);
 }
 
-#contact .container .media {
+.contact-section .container .media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,19 +643,19 @@
   text-align: center;
 }
 
-#contact .container .media .media-item {
+.contact-section .container .media .media-item {
   font-size: 3vh;
 }
 
-#contact .container .media .media-item a {
+.contact-section .container .media .media-item a {
   color: #000;
 }
 
-#contact .container .media .media-item a:hover {
+.contact-section .container .media .media-item a:hover {
   color: #1592c8;
 }
 
-#contact .container .media .media-item .social-media {
+.contact-section .container .media .media-item .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -669,7 +670,7 @@ footer {
 }
 
 footer p {
-  font-size: 2vh;
+  font-size: 2.2vh;
   line-height: 5vh;
   text-align: center;
   color: #fff;
