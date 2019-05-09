@@ -47,7 +47,6 @@
       font-weight: bold;
       color: $dark-gray;
 
-
       @include media(530px) {
         font-size: 2.2rem;
       }
@@ -58,6 +57,12 @@
 
       @include media-hor(1000px) {
         font-size: 2rem;
+      }
+
+      &.bar-name {
+        @include media(900px) {
+          color: $blue-font;
+        }
       }
     }
 

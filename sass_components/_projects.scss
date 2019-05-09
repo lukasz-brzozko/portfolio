@@ -26,19 +26,56 @@
       // height: $project-height;
       margin-bottom: 70px;
 
+      @include media(1200px) {
+        margin-bottom: 50px;
+      }
+
       .img-container {
-        border: 2px solid white;
+        position: relative;
         border-radius: $border-radius;
-        width: $project-height;
-        height: $project-height;
-        margin-right: 100px;
+        min-width: $project-height;
+        min-height: $project-height;
+        margin-right: $img-cont-marg;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: -$img-cont-marg;
+          transform: translateY(-50%);
+          width: 0;
+          height: 5px;
+          background-color: $blue-bgc;
+          transition: width 0.3s;
+        }
+
+        &:hover::before {
+          width: $img-cont-marg;
+        }
+
+        @include media(1023px) {
+          display: none;
+        }
+
+        &.portfolio {
+          background-image: url('../img/project_portfolio.png');
+          background-size: cover;
+        }
       }
 
       .description-container {
-        background-color: #29a6dc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $blue-bgc;
         border-radius: $border-radius;
         width: 50%;
         height: $project-height;
+
+        @include media(1023px) {
+          width: 100%;
+          height: auto;
+        }
 
         .project-description {
           box-sizing: border-box;
@@ -60,17 +97,63 @@
             line-height: 1.5;
             font-size: 2.5rem;
             text-align: justify;
+
+            @include media(1360px) {
+              font-size: 2.2rem;
+            }
+
+            @include media(1200px) {
+              font-size: 2.1rem;
+            }
+
+            @include media(1100px) {
+              font-size: 2rem;
+            }
+          }
+
+          &.visit {
+            @include flex-row-center;
+            justify-content: center;
+            height: 25%;
+            font-size: 4rem;
+
+            .visit-site {
+              margin: 0 50px;
+              color: $white;
+            }
+
+            .visit-site:hover {
+              color: $dark-gray;
+            }
           }
         }
       }
     }
 
 
-    .project:nth-of-type(even)>.description-container {
-      background-color: $light-gray;
+    .project:nth-of-type(even) {
 
-      .project-description {
-        color: #000;
+      .img-container {
+        &::before {
+          background-color: $light-gray;
+        }
+      }
+
+      .description-container {
+        background-color: $light-gray;
+
+        .project-description {
+          color: $black;
+
+          .visit-site {
+            color: $black;
+          }
+
+          .visit-site:hover {
+            color: $blue-font;
+          }
+
+        }
       }
     }
   }
