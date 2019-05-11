@@ -559,6 +559,24 @@
   margin: 100px 0 50px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .projects-section .container .project-subtitle {
+    margin: 0 0 30px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .projects-section .container .project-subtitle {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1200px) {
+  .projects-section .container .project-subtitle {
+    margin-top: 70px;
+  }
+}
+
 .projects-section .container .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -612,6 +630,13 @@
 
 .projects-section .container .project .img-container.portfolio {
   background-image: url("../img/project_portfolio.png");
+}
+
+.projects-section .container .project .img-container.schedule {
+  border: 2px solid white;
+}
+
+.projects-section .container .project .img-container.portfolio, .projects-section .container .project .img-container.schedule {
   background-size: cover;
 }
 
@@ -656,6 +681,31 @@
   letter-spacing: 2px;
 }
 
+@media only screen and (max-width: 1360px) {
+  .projects-section .container .project .description-container .project-description.project-name {
+    font-size: 3.2rem;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .projects-section .container .project .description-container .project-description.project-name {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .projects-section .container .project .description-container .project-description.project-name {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .projects-section .container .project .description-container .project-description.project-name {
+    font-size: 2.4rem;
+  }
+}
+
 .projects-section .container .project .description-container .project-description.description {
   max-height: 50%;
   line-height: 1.5;
@@ -678,6 +728,14 @@
 @media only screen and (max-width: 1100px) {
   .projects-section .container .project .description-container .project-description.description {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .projects-section .container .project .description-container .project-description.description {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.8rem;
   }
 }
 
@@ -851,23 +909,23 @@ ul {
 
 @media only screen and (max-width: 650px) {
   .subtitle {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
 @media only screen and (max-width: 330px) {
   .subtitle {
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1023px) {
   .subtitle {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 700px) {
+@media only screen and (orientation: landscape) and (max-width: 731px) {
   .subtitle {
     font-size: 4rem;
   }

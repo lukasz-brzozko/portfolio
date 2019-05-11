@@ -58,18 +58,18 @@ ul {
   }
 
   @include media(650px) {
-    font-size: 5rem;
-  }
-
-  @include media(330px) {
     font-size: 4rem;
   }
 
-  @include media-hor(1023px) {
-    font-size: 5rem;
+  @include media(330px) {
+    font-size: 3.4rem;
   }
 
-  @include media-hor(700px) {
+  @include media-hor(1023px) {
+    font-size: 4.5rem;
+  }
+
+  @include media-hor(731px) {
     font-size: 4rem;
   }
 }
