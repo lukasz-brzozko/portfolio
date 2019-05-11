@@ -12,19 +12,62 @@
         width: 40%;
         transform: translate(-50%, -50%);
 
+        @include media(1440px) {
+            width: 50%;
+        }
+
+        @include media(650px) {
+            width: 70%;
+        }
+
         .media {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            height: 30vh;
+            min-height: 30vh;
             margin-top: 3vh;
             text-align: center;
 
+            @include media-por(1023px) {
+                justify-content: center;
+                text-align: left;
+                margin-top: 40px;
+            }
+
             .media-item {
-                font-size: 3vh;
+                font-size: 3rem;
+
+                @include media(1440px) {
+                    font-size: 2.8rem;
+                }
+
+                @include media(1023px) {
+                    font-size: 2.4rem;
+                }
+
+                @include media(650px) {
+                    font-size: 2.2rem;
+                }
+
+                @include media(330px) {
+                    font-size: 2rem;
+                }
+
+                @include media-hor-and-height(800px) {
+                    font-size: 2.2rem
+                }
+
+                @include media-hor-and-height(414px) {
+                    font-size: 2rem
+                }
 
                 a {
                     color: #000;
+
+                    .fas,
+                    .fab {
+                        margin-right: 5px;
+                    }
                 }
 
                 a:hover {
@@ -34,7 +77,24 @@
                 .social-media {
                     display: flex;
                     justify-content: space-between;
+
+                    @include media-por(1023px) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
                 }
+            }
+
+            .li-item {
+                margin-top: 25px;
+
+            }
+
+            .social {
+                @include media-por(1023px) {
+                    margin-top: 0
+                }
+
             }
         }
     }
