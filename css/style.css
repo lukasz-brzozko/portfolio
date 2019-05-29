@@ -633,7 +633,7 @@
 }
 
 .projects-section .container .project .img-container.schedule {
-  border: 2px solid white;
+  background-image: url("../img/project_schedule.gif");
 }
 
 .projects-section .container .project .img-container.portfolio, .projects-section .container .project .img-container.schedule {
