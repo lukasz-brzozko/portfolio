@@ -100,6 +100,8 @@
 }
 .flying-cloud {
   position: absolute;
+  user-select: none;
+  -webkit-user-drag: none;
   @include media(1024px) {
     display: none;
   }
