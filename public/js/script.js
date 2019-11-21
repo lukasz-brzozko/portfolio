@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (innerWidth > 1024) {
+    const animateBg = new AnimatedBgComponent(".flying-cloud");
+    const titleEl = document.getElementById("title");
+    titleEl.addEventListener("mousemove", e => {
+      animateBg.moveElements(e);
+    });
+  }
   const anchors = document.querySelectorAll(".scroll");
   const btn = document.querySelector(".btn-menu");
   const topBar = document.querySelector(".top-bar");
