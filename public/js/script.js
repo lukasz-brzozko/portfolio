@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   if (innerWidth > 1024) {
-    const animateBg = new AnimatedBgComponent(".flying-cloud");
+    const animateBg = new AnimatedBgComponent(".flying");
     const titleEl = document.getElementById("title");
     titleEl.addEventListener("mousemove", e => {
       animateBg.moveElements(e);

@@ -1,11 +1,12 @@
 // ##### TOP BAR #####
+@import "./_variables";
 
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: $top-bar-height;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
@@ -110,7 +111,6 @@
       .menu-item-mobile {
         opacity: 0;
       }
-
     }
 
     .btn-menu {
@@ -189,11 +189,10 @@
           align-items: center;
 
           .menu-item-mobile {
-            animation: smooth-show 0.3s 0.3s forwards
+            animation: smooth-show 0.3s 0.3s forwards;
           }
         }
       }
-
 
       .btn-menu {
         justify-content: center;
@@ -216,11 +215,10 @@
 
 @keyframes smooth-show {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
-
 }
