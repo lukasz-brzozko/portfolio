@@ -10,11 +10,14 @@ class AnimatedBgComponent {
     const moveX = clientX - centerX;
     const moveY = clientY - centerY;
 
-    this.elements.forEach(el => {
-      const ratioX = el.getAttribute("ratioX");
-      const ratioY = el.getAttribute("ratioY");
-      el.style.transform = `translate(${moveX * -ratioX}px,${moveY *
-        -ratioY}px)`;
+    this.elements.forEach((el) => {
+      const ratioX = el.getAttribute("ratiox");
+      const ratioY = el.getAttribute("ratioy");
+      el.style.transform = `translate(${moveX * -ratioX}px,${
+        moveY * -ratioY
+      }px)`;
     });
   }
 }
+
+export default AnimatedBgComponent;

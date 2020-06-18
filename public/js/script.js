@@ -1,23 +1,24 @@
+import AnimatedBgComponent from "./AnimatedBgComponent";
+import { addClouds, addTitle } from "./addSVG";
+import { animate } from "./animate";
+import "../../sass_components/style.scss";
+
 document.addEventListener("DOMContentLoaded", () => {
   if (innerWidth > 1024) {
-    const animateBg = new AnimatedBgComponent(".flying");
-    const titleEl = document.getElementById("title");
-    titleEl.addEventListener("mousemove", e => {
-      animateBg.moveElements(e);
-    });
+    addClouds();
   }
   const anchors = document.querySelectorAll(".scroll");
   const btn = document.querySelector(".btn-menu");
   const topBar = document.querySelector(".top-bar");
 
   // Setting a smooth scroll for all the anchors from the top bar
-  const setSmoothScroll = function(e) {
+  const setSmoothScroll = function (e) {
     e.preventDefault();
     const hash = this.hash; //href
     document.querySelector(hash).scrollIntoView({
       behavior: "smooth",
       block: "start",
-      inline: "nearest"
+      inline: "nearest",
     });
   };
 
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     topBar.classList.remove("expand");
   };
 
-  anchors.forEach(anchor => {
+  anchors.forEach((anchor) => {
     anchor.addEventListener("click", setSmoothScroll);
     if (anchor.classList.contains("mobile")) {
       anchor.addEventListener("click", removeExpandClass);
@@ -42,4 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     if (innerWidth > 900) removeExpandClass();
   });
+
+  addTitle();
+  animate();
 });
