@@ -1,7 +1,4 @@
-// ##### PROJECTS SECTION #####
-
 .projects-section {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +32,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // height: $project-height;
       margin-bottom: 70px;
 
       @include media(1200px) {
@@ -50,7 +46,7 @@
         margin-right: $img-cont-marg;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 50%;
           right: -$img-cont-marg;
@@ -70,11 +66,11 @@
         }
 
         &.portfolio {
-          background-image: url('../img/project_portfolio.png');
+          background-image: url("../public/img/project_portfolio.png");
         }
 
         &.schedule {
-          background-image: url('../img/project_schedule.gif'); // temporary
+          background-image: url("../public/img/project_schedule.gif");
         }
 
         &.portfolio,
@@ -168,9 +164,7 @@
       }
     }
 
-
     .project:nth-of-type(even) {
-
       .img-container {
         &::before {
           background-color: $light-gray;
