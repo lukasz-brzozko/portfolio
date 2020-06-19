@@ -95,7 +95,7 @@ export const animate = () => {
         scale: [1.1, 1],
         duration: 700,
         complete: function (anim) {
-          if (svgClouds) {
+          if (svgClouds.length) {
             const animateBg = new AnimatedBgComponent(".flying");
             const titleEl = document.getElementById("title");
             titleEl.addEventListener("mousemove", (e) => {

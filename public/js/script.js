@@ -1,4 +1,3 @@
-import AnimatedBgComponent from "./AnimatedBgComponent";
 import { addClouds, addTitle } from "./addSVG";
 import { animate } from "./animate";
 import "../../sass_components/style.scss";
@@ -6,15 +5,20 @@ import "../../sass_components/style.scss";
 document.addEventListener("DOMContentLoaded", () => {
   if (innerWidth > 1024) {
     addClouds();
+  } else {
+    const sun = document.querySelector(".sun");
+    sun.style.display = "none";
   }
   const anchors = document.querySelectorAll(".scroll");
   const btn = document.querySelector(".btn-menu");
   const topBar = document.querySelector(".top-bar");
 
+  const media = window.matchMedia("(max-width: 900px)");
+
   // Setting a smooth scroll for all the anchors from the top bar
   const setSmoothScroll = function (e) {
     e.preventDefault();
-    const hash = this.hash; //href
+    const hash = this.hash;
     document.querySelector(hash).scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -40,9 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Shrink the top bar when the window is resized manually
-  window.addEventListener("resize", () => {
-    if (innerWidth > 900) removeExpandClass();
-  });
+  const setTopbar = (e) => {
+    if (e.matches) {
+      removeExpandClass();
+    }
+  };
+
+  media.addEventListener("change", setTopbar);
 
   addTitle();
   animate();
