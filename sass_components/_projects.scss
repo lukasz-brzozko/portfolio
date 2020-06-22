@@ -49,16 +49,17 @@
           content: "";
           position: absolute;
           top: 50%;
-          right: -$img-cont-marg;
-          transform: translateY(-50%);
-          width: 0;
+          left: 100%;
+          transform: translate($img-cont-marg, -50%);
+          width: $img-cont-marg + 1;
           height: 5px;
+          border-radius: 10px;
           background-color: $blue-bgc;
-          transition: width 0.3s;
+          transition: transform 0.3s;
         }
 
         &:hover::before {
-          width: $img-cont-marg;
+          transform: translate(0, -50%);
         }
 
         @include media(1023px) {
@@ -87,6 +88,7 @@
         border-radius: $border-radius;
         width: 50%;
         height: $project-height;
+        z-index: 2;
 
         @include media(1023px) {
           width: 100%;
