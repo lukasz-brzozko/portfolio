@@ -1,7 +1,7 @@
-import cloud from "../img/cloud.svg";
-import name from "../img/name.svg";
-import surname from "../img/surname.svg";
-import profession from "../img/profession.svg";
+import cloud from "../img/svg/cloud.svg";
+import name from "../img/svg/name.svg";
+import surname from "../img/svg/surname.svg";
+import profession from "../img/svg/profession.svg";
 
 const cloudParameters = [
   {

@@ -1,5 +1,6 @@
 import { addClouds, addTitle } from "./addSVG";
 import { animate } from "./animate";
+import "../img/favicon.png";
 import "../../sass_components/style.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
