@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "animejs": "^3.2.0",
-    "firebase": "^6.0.2",
-    "firebase-admin": "^7.3.0",
-    "firebase-tools": "^6.9.2"
+    "animejs": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
