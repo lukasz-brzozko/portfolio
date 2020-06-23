@@ -45,6 +45,10 @@
         min-height: $project-height;
         margin-right: $img-cont-marg;
 
+        @include media(1200px) {
+          margin-right: $img-cont-marg / 2;
+        }
+
         &::before {
           content: "";
           position: absolute;
@@ -73,9 +77,13 @@
         &.schedule {
           background-image: url("../public/img/project_schedule.gif");
         }
+        &.florian {
+          background-image: url("../public/img/project_florian.png");
+        }
 
         &.portfolio,
-        &.schedule {
+        &.schedule,
+        &.florian {
           background-size: cover;
         }
       }
@@ -87,9 +95,13 @@
         background-color: $blue-bgc;
         border-radius: $border-radius;
         width: 50%;
+        min-height: 370px;
         height: $project-height;
         z-index: 2;
 
+        @include media(1440px) {
+          width: 60%;
+        }
         @include media(1023px) {
           width: 100%;
           height: auto;
@@ -130,14 +142,18 @@
           &.description {
             max-height: 50%;
             line-height: 1.5;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             text-align: justify;
 
             @include media(1630px) {
-              font-size: 2.2rem;
+              font-size: 2.1rem;
             }
 
-            @include media(1110px) {
+            @include media(1360px) {
+              font-size: 2rem;
+            }
+
+            @include media(1220px) {
               font-size: 1.8rem;
             }
 

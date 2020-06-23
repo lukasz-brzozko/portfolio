@@ -1,21 +1,22 @@
-// ##### FOOTER #####
-
 footer {
-    height: 5vh;
-    background-color: rgb(41, 166, 220);
+  height: 5vh;
+  background-color: rgb(41, 166, 220);
 
-    p {
-        font-size: 20px;
-        line-height: 5vh;
-        text-align: center;
-        color: #fff;
+  p {
+    font-size: 20px;
+    line-height: 5vh;
+    text-align: center;
+    color: #fff;
 
-        @media(orientation: portrait) {
-            font-size: 2.2vh;
-        }
-
-        @include media-hor-and-height(812px) {
-            font-size: 3.2vh;
-        }
+    @media (orientation: portrait) {
+      font-size: 2.4vh;
     }
+
+    @include media-hor-and-height(812px) {
+      font-size: 3.3vh;
+    }
+    @include media-hor-and-height(700px) {
+      font-size: 4vh;
+    }
+  }
 }
