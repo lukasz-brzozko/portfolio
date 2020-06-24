@@ -60,6 +60,16 @@
     }
   }
 
+  .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    perspective: 2000px;
+    perspective-origin: center;
+  }
+
   svg {
     &.flying {
       &.cloud {

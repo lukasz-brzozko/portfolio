@@ -13,9 +13,9 @@ class AnimatedBgComponent {
     this.elements.forEach((el) => {
       const ratioX = el.getAttribute("ratiox");
       const ratioY = el.getAttribute("ratioy");
-      el.style.transform = `translate(${moveX * -ratioX}px,${
+      el.style.transform = `translate3d(${moveX * -ratioX}px,${
         moveY * -ratioY
-      }px)`;
+      }px,${(moveX * -ratioX + moveY * -ratioY) * 0.9}px)`;
     });
   }
 }
