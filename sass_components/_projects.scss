@@ -39,10 +39,13 @@
       }
 
       .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         border-radius: $border-radius;
-        min-width: $project-height;
-        min-height: $project-height;
+        width: $project-height;
+        height: $project-height;
         margin-right: $img-cont-marg;
 
         @include media(1200px) {
@@ -57,7 +60,6 @@
           transform: translate($img-cont-marg, -50%);
           width: $img-cont-marg + 1;
           height: 5px;
-          border-radius: 10px;
           background-color: $blue-bgc;
           transition: transform 0.3s;
         }
@@ -69,23 +71,12 @@
         @include media(1023px) {
           display: none;
         }
+      }
 
-        &.portfolio {
-          background-image: url("../public/img/projects/portfolio.png");
-        }
-
-        &.schedule {
-          background-image: url("../public/img/projects/schedule.gif");
-        }
-        &.florian {
-          background-image: url("../public/img/projects/florian.png");
-        }
-
-        &.portfolio,
-        &.schedule,
-        &.florian {
-          background-size: cover;
-        }
+      &-img {
+        max-height: 100%;
+        width: auto;
+        border-radius: 10px;
       }
 
       .description-container {
