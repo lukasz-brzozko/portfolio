@@ -1,5 +1,6 @@
 import { addClouds, addTitle } from "./addSVG";
 import { animate } from "./animate";
+
 import "../img/favicon.png";
 import "../../sass_components/style.scss";
 
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  //Shrinks the top bar
+  // Shrinks the top bar
   const removeExpandClass = () => {
     topBar.classList.remove("expand");
   };
@@ -51,8 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const setCurrentYear = () => {
+    const yearEl = document.querySelector(".year");
+    const date = new Date();
+    const currentYear = date.getFullYear();
+
+    yearEl.textContent = currentYear;
+  };
+
   media.addEventListener("change", setTopbar);
 
   addTitle();
   animate();
+  setCurrentYear();
 });
