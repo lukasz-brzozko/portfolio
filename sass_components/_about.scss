@@ -9,6 +9,9 @@
         top: 50%;
         left: 15%;
         right: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         transform: translateY(-50%);
 
         @include media(1500px) {
