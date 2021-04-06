@@ -1,5 +1,5 @@
 import anime from "animejs/lib/anime.es.js";
-import AnimatedBgComponent from "./AnimatedBgComponent";
+import AnimatedBg from "../components/AnimatedBg/AnimatedBg";
 
 export const animate = () => {
   const svgNamePath = document.querySelector(".svg-name path");
@@ -96,7 +96,7 @@ export const animate = () => {
         duration: 700,
         complete: function (anim) {
           if (svgClouds.length) {
-            const animateBg = new AnimatedBgComponent(".flying");
+            const animateBg = new AnimatedBg(".flying");
             const titleEl = document.getElementById("title");
             titleEl.addEventListener("mousemove", (e) => {
               animateBg.moveElements(e);

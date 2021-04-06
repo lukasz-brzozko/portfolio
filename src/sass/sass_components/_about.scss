@@ -13,6 +13,7 @@
         flex-direction: column;
         align-items: center;
         transform: translateY(-50%);
+        pointer-events: none;
 
         @include media(1500px) {
             left: 10%;

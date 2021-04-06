@@ -1,4 +1,4 @@
-class AnimatedBgComponent {
+class AnimatedBg {
   constructor(selector) {
     this.elements = document.querySelectorAll(selector);
   }
@@ -20,4 +20,4 @@ class AnimatedBgComponent {
   }
 }
 
-export default AnimatedBgComponent;
+export default AnimatedBg;

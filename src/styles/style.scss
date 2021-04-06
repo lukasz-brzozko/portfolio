@@ -1,10 +1,12 @@
-@import "variables";
-@import "mixins";
-@import "header";
-@import "about";
-@import "projects";
-@import "contact";
-@import "footer";
+@import "../sass/sass_components/variables";
+@import "../sass/sass_components/mixins";
+@import "../sass/sass_components/header";
+@import "../sass/sass_components/about";
+@import "../sass/sass_components/projects";
+@import "../sass/sass_components/contact";
+@import "../sass/sass_components/footer";
+@import "../sass/sass_components/playground";
+@import "../sass/sass_components/canvas";
 
 ::selection {
   background-color: rgba(0, 0, 0, 0.5);

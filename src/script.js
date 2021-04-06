@@ -1,7 +1,7 @@
-import { addClouds, addTitle } from "./addSVG";
-import { animate } from "./animate";
+import { addClouds, addTitle } from "./helpers/addSVG";
+import { animate } from "./helpers/animate";
 
-import "../../sass_components/style.scss";
+import './styles/style.scss';
 
 document.addEventListener("DOMContentLoaded", () => {
   if (innerWidth > 1024) {
