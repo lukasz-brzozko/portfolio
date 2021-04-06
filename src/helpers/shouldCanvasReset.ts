@@ -23,7 +23,7 @@ const shouldCanvasReset = (
       (widthHasChanged || heightHasChanged)
             && (
               !windowDimensionIsGreaterThan(largeScreen, window.innerWidth)
-                && (Math.abs(previousHeight - window.innerHeight) > 70)
+                && (Math.abs(previousHeight - window.innerHeight) > 100)
             )
     )
         || (
