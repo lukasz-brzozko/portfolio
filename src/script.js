@@ -1,10 +1,11 @@
 import { addClouds, addTitle } from "./helpers/addSVG";
 import { animate } from "./helpers/animate";
+import MEDIA from "./constants/media";
 
 import './styles/style.scss';
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (innerWidth > 1024) {
+  if (innerWidth > MEDIA.large) {
     addClouds();
   } else {
     const sun = document.querySelector(".sun");
