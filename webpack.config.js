@@ -4,13 +4,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
 
-  entry: "./public/js/script.js",
+  entry: {
+    index: "./src/script.js",
+    playground: './src/playground.ts',
+  },
 
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contentHash].js",
+  },
+
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   },
 
   devServer: {
@@ -20,6 +27,15 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        use: 'html-loader',
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
@@ -61,6 +77,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public/index.html"),
+      favicon:  "./src/img/favicon.png",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
